@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список героев</title>
+</head>
+<body>
+    {% if error_message %}
+    <h1>Error</h1>
+    <p>{{ error_message }}</p>
+    <ul>
+        {% for error in error_details %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h1>Список героев</h1>
+    <ul>
+        {% for hero in heroes %}
+        <li>{{ hero.displayName }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Главная страница</title>
+  <style>
+    /*body {
+      background-image: url(background.jpg);
+      background-size: cover;
+      color: white;
+    }*/
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h2 {
+      font-size: 25px;
+      text-align: center;
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    .menu-container {
+      //margin-top: 20px;
+      background-color: lightgrey;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h2>Рекомендация персонажей на основе уже выбранных</h2>
+    <h2>|</h2>
+    <h2>Статистика по персонажам</h2>
+    <h2>|</h2>
+    <h2>Статистика по вашим играм</h2>
+  </div>
+  <h1>Будущая система поддержки принятия решений</h1>
+</body>
+</html>
+-->
