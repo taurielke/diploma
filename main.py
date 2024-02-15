@@ -11,6 +11,7 @@ def index():
         heroes {
           id
           displayName
+          shortName
         }
       }
     }
