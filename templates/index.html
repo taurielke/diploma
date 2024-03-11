@@ -8,17 +8,18 @@
     <h1>Список героев</h1>
     <div class="container">
         {% for col in range(10) %}
-        <div class="column">
+        <div class="column" data-col="{{ col }}">
             {% for hero in heroes %}
-            <div class="hero">
-                <img src='https://cdn.stratz.com/images/dota2/heroes/{{hero.shortName}}_vert.png' alt="{{ hero.displayName }}">
+            <div class="hero" data-index="{{ loop.index0 }}">
+                <img src='https://cdn.stratz.com/images/dota2/heroes/{{hero.shortName}}_vert.png'
+                     alt="{{ hero.displayName }}">
                 <!--<p>{{ hero.displayName }}</p>-->
             </div>
             {% endfor %}
         </div>
         {% endfor %}
     </div>
+
+    <script src="static/js/chooseHero.js"></script>
 </body>
 </html>
-
-
